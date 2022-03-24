@@ -17,8 +17,8 @@ routes.post("/cadastrar", async (req, res) => {
   let form = new User()
   form = req.body
   console.log(form)
-  let result = await cadastro.cadastrar(form)
-  res.send(result)
+  let result = await cadastro.cadastrar(form, res)
+  res.json(result)
 })
 routes.post("login", (req, res) => {})
 routes.post("message", (req, res) => {})
